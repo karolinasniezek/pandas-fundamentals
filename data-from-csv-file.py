@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('diagrams/diagram.csv')
+df = pd.read_csv('datasets/diagram.csv')
 print(df)
 
 columnsList = list(df.columns)

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv("diagrams/workers.csv", sep=";")
+df = pd.read_csv("datasets/workers.csv", sep=";")
 
 ndf = df[df.isna().any(axis=1)]
 print(ndf)
