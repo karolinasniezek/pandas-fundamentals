@@ -2,21 +2,14 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-N = int(input())
-L = [x * x for x in range(2*N + 1)]
-C = [x*x*x*x for x in range(-N, N + 1)]
-Lab = [chr(65 +  x) for x in range(2*N + 1)]
+data = {
+    "extension": [403, 390, 490, 890],
+    "income": [50000, 40000, 45000, 52000],
+    "name": ['Andy', 'Yusuf', 'Eva', 'Anna']
+}
 
-P = pd.Series(L, index=Lab)
-Q = pd.Series(C, index=Lab)
-
-for c in P.index:
-    print(c, P[c], Q[c])
-
-
-Gt = P.gt(Q)
-print(Gt)
-
-
-
-
+df = pd.DataFrame(data)
+print(df)
+print(list(df.columns))
+print((df.loc[0].to_string()))
+print((df.loc[len(df) - 1]).to_string())
